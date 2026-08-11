@@ -1,0 +1,31 @@
+{
+  "name": "Visionary3D Studio Agentic Workflow",
+  "description": "Langflow orchestration flow for parsing natural language prompts and triggering Blender 3D generation.",
+  "nodes": [
+    {
+      "id": "PromptInput-1",
+      "type": "ChatInput",
+      "description": "Accepts natural language 3D generation prompts from the user."
+    },
+    {
+      "id": "AgentOrchestrator-2",
+      "type": "AgentExecutor",
+      "description": "Breaks down prompts into geometry, material, and animation tasks using LLM reasoning."
+    },
+    {
+      "id": "BlenderMCPTool-3",
+      "type": "CustomTool",
+      "description": "Sends verified bpy execution scripts to the Visionary3D MCP server."
+    }
+  ],
+  "edges": [
+    {
+      "source": "PromptInput-1",
+      "target": "AgentOrchestrator-2"
+    },
+    {
+      "source": "AgentOrchestrator-2",
+      "target": "BlenderMCPTool-3"
+    }
+  ]
+}
