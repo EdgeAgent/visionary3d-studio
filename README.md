@@ -14,6 +14,8 @@
 
 </div>
 
+![Visionary3D Studio social preview](https://raw.githubusercontent.com/EdgeAgent/visionary3d-studio/main/assets/social-preview.png)
+
 ---
 
 ## 🎯 Overview
